@@ -63,7 +63,15 @@ exports.arraysAnswers = {
   },
 
   count : function(arr, item) {
+    var count = 0;
 
+    arr.forEach(function (i) {
+      if (i === item) {
+        count += 1;
+      }
+    });
+
+    return count;
   },
 
   duplicates : function(arr) {
