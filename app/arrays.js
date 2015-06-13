@@ -23,7 +23,14 @@ exports.arraysAnswers = {
   },
 
   removeWithoutCopy : function(arr, item) {
+    var index = arr.indexOf(item);
 
+    if (index !== -1) {
+      arr.splice(index, 1);
+      return this.removeWithoutCopy(arr, item);
+    }
+
+    return arr
   },
 
   append : function(arr, item) {
