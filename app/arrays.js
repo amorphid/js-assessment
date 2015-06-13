@@ -75,7 +75,19 @@ exports.arraysAnswers = {
   },
 
   duplicates : function(arr) {
+    var obj  = {};
+    var dups = [];
 
+    arr.forEach(function (i) {
+      if (obj[i] === 1 ) {
+        obj[i] += 1;
+        dups.push(i);
+      } else {
+        obj[i] = 1;
+      }
+    });
+
+    return dups;
   },
 
   square : function(arr) {
