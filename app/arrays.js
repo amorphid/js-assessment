@@ -97,6 +97,14 @@ exports.arraysAnswers = {
   },
 
   findAllOccurrences : function(arr, target) {
+    var indexes = [];
 
+    for (var i = 0; i < arr.length; i += 1) {
+      if (arr[i] === target) {
+        indexes.push(i);
+      }
+    }
+
+    return indexes;
   }
 };
