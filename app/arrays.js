@@ -7,7 +7,13 @@ exports.arraysAnswers = {
   },
 
   sum : function(arr) {
+    var sum = 0;
 
+    arr.forEach(function(i) {
+      sum += i;
+    });
+
+    return sum;
   },
 
   remove : function(arr, item) {
