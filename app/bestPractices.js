@@ -16,13 +16,7 @@ exports.bestPracticesAnswers = {
   },
 
   functions : function(flag) {
-    if (flag) {
-      function getValue() { return 'a'; }
-    } else {
-      function getValue() { return 'b'; }
-    }
-
-    return getValue();
+    return flag ? "a" : "b";
   },
 
   parseInt : function(num) {
