@@ -34,7 +34,9 @@ exports.functionsAnswers = {
   },
 
   partial : function(fn, str1, str2) {
-
+    return function (punctuation) {
+      return fn(str1, str2, punctuation);
+    };
   },
 
   useArguments : function() {
