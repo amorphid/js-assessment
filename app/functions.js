@@ -15,7 +15,14 @@ exports.functionsAnswers = {
   },
 
   functionFunction : function(str) {
+    var strings = [str];
 
+    var concat = function (str) {
+      strings.push(str);
+      return strings.join(", ")
+    }
+
+    return concat
   },
 
   makeClosures : function(arr, fn) {
