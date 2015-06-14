@@ -26,7 +26,11 @@ exports.functionsAnswers = {
   },
 
   makeClosures : function(arr, fn) {
-
+    return arr.map(function (i) {
+      return function () {
+        return fn(i);
+      }
+    });
   },
 
   partial : function(fn, str1, str2) {
