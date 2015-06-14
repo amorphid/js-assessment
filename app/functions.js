@@ -50,7 +50,11 @@ exports.functionsAnswers = {
   },
 
   callIt : function(fn) {
-
+    if (arguments.length === 3) {
+      fn(arguments[1], arguments[2]);
+    } else {
+      fn(arguments[1], arguments[2], arguments[3]);
+    }
   },
 
   partialUsingArguments : function(fn) {
