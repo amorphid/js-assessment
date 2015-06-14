@@ -10,7 +10,8 @@ exports.functionsAnswers = {
   },
 
   speak : function(fn, obj) {
-
+    obj.speak = fn;
+    return obj.speak();
   },
 
   functionFunction : function(str) {
