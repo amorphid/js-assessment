@@ -2,7 +2,11 @@ exports = (typeof window === 'undefined') ? global : window;
 
 exports.functionsAnswers = {
   argsAsArray : function(fn, arr) {
+    var greeting    = arr[0];
+    var name        = arr[1];
+    var punctuation = arr[2]
 
+    return fn(greeting, name, punctuation)
   },
 
   speak : function(fn, obj) {
